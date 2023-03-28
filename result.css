@@ -1,0 +1,64 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}    
+
+html {
+    background-image: url(/images/quiz_background.jpg);
+    background-size: cover;
+}
+
+body{
+    font-family: "Georgia", "Times New Roman", serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.result {
+    display: grid;
+    grid-template-rows: 3.75em auto;
+    width: 31.25em;
+    height: 12.5em;
+    margin-left: 0.5em;
+}
+
+#header {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height: 100%;
+    padding-left: 1.875em;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    background-color: #c19dff;
+    padding: 1.875em;
+}
+
+h3 {
+    font-family: "Times New Roman","Georgia", serif; 
+    text-align: center;
+    margin-top: 0.625em;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 660px) {
+.result {
+    width: 19.25em;
+    height: 12.5em;
+    margin-left: -1em;
+    } 
+}

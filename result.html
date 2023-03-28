@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Mental Health">
+        <meta name="author" content="Julia Ciesarikova">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quiz result</title>
+        <link rel="stylesheet" href="./stylesheet.css">
+        <link rel="stylesheet" href="./result.css">
+        <script src="https://kit.fontawesome.com/06d8973368.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="/images/plant_icon.png">
+    </head>
+
+    <body>
+        <header>Mental Wellbeing <i style="font-size:30px; color:black" class="fa-solid fa-seedling"></i></header>
+        <nav class="navbar">
+            <ul>
+                <li class="dropdown">
+                    <a href="./index.html">Menu</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./index.html#mentalhealth">What is Mental Health</a></li>
+                        <li><a href="./index.html#maf">Myths and Facts</a></li>
+                        <li><a href="./index.html#recovery">Recovery is Possible</a></li>
+                    </ul>
+                </li>
+                <li><a href="./health_conditions.html" >Health Conditions</a></li>
+                <li><a href="./quiz.html" class="active">Quiz</a></li>
+                <li class="dropdown">
+                    <a href="./self-improvement.html" >Self-Improvement</a>
+                    <ul class="dropdown-menu2">
+                        <li><a href="./self-improvement.html#feelings_and_thoughts">Feelings and thoughts</a></li><br>
+                        <li><a href="./self-improvement.html#physical_health">Physical health</a></li><br>
+                        <li><a href="./self-improvement.html#nature">Nature</a></li><br>
+                        <li><a href="./self-improvement.html#connect">Connect with others</a></li><br>
+                        <li><a href="./self-improvement.html#creativity">Creativity</a></li><br>
+                        <li><a href="./self-improvement.html#sleep">Sleep</a></li>
+                    </ul>
+                </li>
+                <li><a href="./help.html">Help</a></li>
+            </ul>
+        </nav>
+        <div id="wrapper">
+            <div class="result">
+                <div id="header">
+                    <h2 class="userpoints">Your points: <span class="points">0</span>/10</h2>
+                </div>
+                <div class="message">
+                    <h3><span class="msg">Customized message</span></h3>
+                </div>
+            </div>
+        </div>
+        <script>
+            let user_points = sessionStorage.getItem("points");
+            document.querySelector("span.points").innerHTML = user_points;
+
+            if (user_points >= 8) {    
+                document.querySelector("span.msg").innerHTML = "Congratulations! Your mental health awareness is perfect.";
+            } else if (user_points >= 5){
+                document.querySelector("span.msg").innerHTML = "Not bad at all, except for a few tiny flaws. Keep it up!";
+            } else {
+                document.querySelector("span.msg").innerHTML = "Maybe it wouldn't be bad if you worked a little on your knowledge. Never is too late!"
+            }
+        </script>
+        <script src="./clickable_header.js"></script>
+    </body>
+</html>
