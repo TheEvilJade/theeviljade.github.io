@@ -53,7 +53,6 @@ header {
   padding: 0.5em;
   background-image: url(./images/header_background.jpg);
   background-size: cover;
-  cursor: pointer;
 }
 
 /* style for <main> element - menu.html, self-improvement.html, help.html, contact.html */
