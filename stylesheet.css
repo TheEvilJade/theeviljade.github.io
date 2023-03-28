@@ -277,7 +277,7 @@ i {
 #yoga_img {
   float: right;
   margin-left: 0.625em;
-  border-radius: 200px;
+  border-radius: 150px;
 }
 
 #nature_img {
@@ -613,4 +613,8 @@ input[type=submit]:hover {
   input[type=text] {
     width: 95%;
   }
+}
+
+::selection {
+  background-color:#dfd0f9;
 }
